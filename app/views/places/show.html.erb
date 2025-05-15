@@ -6,15 +6,16 @@
 <ul>
 <% for entry in @entries %>
   <li><%= entry["title"] %> 
-  <%= entry["occured_on"] %>
+  <%= entry["occurred_on"] %>
   <%= entry["description"] %>
    </li>
 <% end %>
 </ul>
 
 <p>
-  <a href="/places/new?place_id=<%= @place["id"] %>">New Entry</a>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
 </p>
+
 
 <p>
   <a href="/places">Back to All Places</a>

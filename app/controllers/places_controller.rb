@@ -9,7 +9,7 @@ class PlacesController < ApplicationController
   def show
      # find a Place
      @place = Place.find_by({"id" => params["id"]})
-     # p @company
+     p @place
      @entries = Entry.where({"place_id" => @place["id"]})
      # render places/show view with details about Place
   
@@ -30,6 +30,24 @@ class PlacesController < ApplicationController
     # redirect user
     redirect_to "/places"
   end
+
+  # def edit
+  #   # find a Place
+  #   # render view with edit Place form
+  # end
+
+  # def update
+  #   # find a Place
+  #   # assign user-entered form data to Place's columns
+  #   # save Place row
+  #   # redirect user
+  # end
+
+  # def destroy
+  #   # find a Place
+  #   # destroy Place row
+  #   # redirect user
+  # end
 
 
 
