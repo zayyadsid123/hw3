@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-  <body>
 
+<body>
   <!-- Place details page -->
 
   <h1><%= @place["name"] %></h1>
-
 
   <ul>
   <% for entry in @entries %>
     <h2><strong><%= entry["title"] %> </strong> </h2>
     <li> <%= entry["occurred_on"] %>  </li>
     <li> <%= entry["description"] %>  </li>
-    
   <% end %>
   </ul>
 
@@ -25,10 +23,10 @@
     <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
   </p>
 
-
   <p>
     <a href="/places">Back to All Places</a>
   </p>
 
-  </body>
+</body>
+
 </html>
