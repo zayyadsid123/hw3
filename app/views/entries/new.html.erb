@@ -12,16 +12,20 @@
     <p>
       <label for="title">Entry Title</label>
       <input type="text" name="title" id="title">
-      <label for="occurred_on">Occured On Date</label>
+      <label for="occurred_on">Occurred On Date</label>
       <input type="date" name="occurred_on" id="occurred_on">
     </p>
     <p>
       <label for="description">Description</label>
       <input type="text" name="description" id="description">
     </p>
-    <p>
+    <!--<p>
       <label for="place_id">Place ID</label>
       <input type="text" name="place_id" id="place_id" value="<%= @place["id"] %>">
+    </p> -->
+     <!-- Hidden field for place_id (foreign key) -->
+    <p>
+      <input type="hidden" name="place_id" id="place_id" value="<%= @place["id"] %>">
     </p>
     <button>Submit</button>
     <p>
