@@ -19,14 +19,8 @@
       <label for="description">Description</label>
       <input type="text" name="description" id="description">
     </p>
-    <!--<p>
-      <label for="place_id">Place ID</label>
-      <input type="text" name="place_id" id="place_id" value="<%= @place["id"] %>">
-    </p> -->
-     <!-- Hidden field for place_id (foreign key) -->
-    <p>
-      <input type="hidden" name="place_id" id="place_id" value="<%= @place["id"] %>">
-    </p>
+     <!-- Hidden field for place_id (foreign key here) -->
+    <input type="hidden" name="place_id" id="place_id" value="<%= @place["id"] %>">
     <button>Submit</button>
     <p>
       <a href="/places/<%= @place["id"] %>">Back to Place</a>
